@@ -10,3 +10,5 @@ set -o vi
 
 
 export PATH
+
+export JAVA_HOME="/usr/java"
