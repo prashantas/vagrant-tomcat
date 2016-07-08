@@ -21,7 +21,7 @@ $ git clone https://github.com/boundary/boundary-vagrant-tomcat
 
 2. Start the virtual machine using your Boundary API Token:
 ```bash
-$ BOUNDARY_API_TOKEN=<Boundary API Token> vagrant up <virtual machine name>
+$ BOUNDARY_API_TOKEN=<Boundary API Token> JAVA_VERSION=<6/7/8> vagrant up <virtual machine name>
 ```
 NOTE: Run `vagrant status` to list the name of the virtual machines.
 
