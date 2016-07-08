@@ -1,5 +1,5 @@
 
-Configures an virtual machine with an Memcached instance for testing Boundary Plugin for Memcached
+Configures an virtual machine with any given Java version and Tomcat  instance for testing Boundary Plugin for Tomcat
 
 Prerequistes
 ------------
@@ -16,7 +16,7 @@ Prior to installation you need to obtain in your Boundary API Token.
 
 1. Clone the GitHub Repository:
 ```bash
-$ git clone https://github.com/jdgwartney/boundary-vagrant-memcached
+$ git clone https://github.com/boundary/boundary-vagrant-tomcat
 ```
 
 2. Start the virtual machine using your Boundary API Token:
