@@ -10,7 +10,17 @@ node /^ubuntu/ {
 	timeout     => 1800,
   }
 
+   class { 'boundary':
+       token => $boundary_api_token,
+       require => Exec['update-apt-packages']
+   }
 
+
+   java::oracle { 'jdk${::java_version}' :
+  		ensure  => 'present',
+    		version => $::java_version,
+      		java_se => 'jdk',
+    }
 }
 
 # Separate the Cento 7.0 install until the boundary meter puppet package is fixed
@@ -21,6 +31,16 @@ node /^centos-7-0/ {
 	timeout     => 1800,
   }
 
+   class { 'boundary':
+       token => $boundary_api_token,
+       require => Exec['update-rpm-packages']
+   }
+
+   java::oracle { 'jdk${::java_version}' :
+  		ensure  => 'present',
+    		version => $::java_version,
+      		java_se => 'jdk',
+    }
 }
 
 node /^centos/ {
@@ -32,8 +52,12 @@ node /^centos/ {
   }
 
 
+   class { 'boundary':
+       token => $boundary_api_token,
+       require => Exec['update-rpm-packages']
+   }
 
-java::oracle { 'jdk${::java_version}' :
+   java::oracle { 'jdk${::java_version}' :
   		ensure  => 'present',
     		version => $::java_version,
       		java_se => 'jdk',

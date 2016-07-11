@@ -43,6 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
                      puppet module install puppetlabs-concat;
 		     puppet module install puppet-archive;
                      puppet module install puppetlabs-java;
+                     puppet module install boundary-boundary;
                      exit 0"
   end
 
